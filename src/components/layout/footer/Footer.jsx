@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.scss";
-import TelegramSvg from "@/assets/icons/telegram.svg?react";
 import logo from "@/assets/images/header/logo.webp";
 import EmailSvg from "@/assets/icons/email.svg?react";
 import LocationSvg from "@/assets/icons/location.svg?react";
