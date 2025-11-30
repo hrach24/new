@@ -1,0 +1,47 @@
+.mobile__menu {
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(191, 219, 254);
+  @media screen and (max-width: 990px) {
+    display: flex;
+  }
+}
+
+.mobile__menu__item {
+   display: flex;
+}
+
+.mobile__menu__link {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(30 64 175);
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+}
+
+.get__inTouch__button {
+  display: flex;
+  background-color: rgb(249, 115, 22);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.mobile__menuCloser {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
