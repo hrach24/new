@@ -32,7 +32,8 @@ const Products = () => {
                 })}
                 onClick={() => setSelectedCategory(button)}
               >
-                {button}
+                <span>{button}</span>
+                <span>({PRODUCTS[button].length})</span>
               </button>
             ))}
           </div>

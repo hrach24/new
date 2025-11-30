@@ -50,9 +50,10 @@
   justify-content: center;
   width: calc((100% - 5 * 0.5rem) / 6);
   margin: 0;
-  padding: 1rem 0.325rem;
+  padding: 1rem 0.5rem;
   border-radius: 0.325rem;
   border: none;
+  gap: 0.325rem;
   &:active {
     transform: translateY(0.0625rem);
   }

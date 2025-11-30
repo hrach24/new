@@ -34,16 +34,13 @@ import dteEndor from "@/assets/images/products/dentalEquipment/dte-endor.webp";
 export const PRODUCTS = {
   "Medical Imaging": [
     {
-      title: "SonoScape Portable Ultrasound System with Doppler",
+      id: 1,
+      title: "Portable Ultrasound System with Doppler",
       description:
-        "State-of-the-art portable ultrasound system by SonoScape featuring advanced Doppler imaging capabilities for superior blood flow visualization and analysis. The compact laptop-like design with integrated keyboard and high-definition display provides exceptional portability and user-friendly operation. Suitable for vascular imaging, cardiology, emergency medicine, and general diagnostics. Features Color Doppler overlay and detailed spectral Doppler waveforms with velocity measurements for comprehensive hemodynamic assessment.",
+        "State-of-the-art portable ultrasound system featuring advanced Doppler imaging capabilities for superior blood flow visualization and analysis. The compact laptop-like design with integrated keyboard and high-definition display provides exceptional portability and user-friendly operation. Suitable for vascular imaging, cardiology, emergency medicine, and general diagnostics. Features Color Doppler overlay and detailed spectral Doppler waveforms with velocity measurements for comprehensive hemodynamic assessment.",
       image: sonoScape,
       certifications: ["CE", "ISO 13485", "FDA"],
       specifications: [
-        {
-          title: "Brand",
-          text: "SonoScape",
-        },
         {
           title: "Imaging modes",
           text: "B-mode, Color Doppler, Spectral Doppler",
@@ -81,6 +78,7 @@ export const PRODUCTS = {
   ],
   "Medical Equipment": [
     {
+      id: 2,
       title: "Automated Blood Pressure Monitoring Station",
       description:
         "Sophisticated automated blood pressure monitoring station designed for precision, mobility, and ease of use in modern healthcare settings. Features state-of-the-art automated cuff system utilizing advanced oscillometric technology for accurate systolic and diastolic readings. The intuitive high-definition touchscreen display serves as the command center for effortless operation. Mounted on a sturdy mobile pedestal base with smooth-gliding casters for maximum flexibility. Ideal for clinics, hospitals, pharmacies, and health screening centers.",
@@ -124,15 +122,12 @@ export const PRODUCTS = {
   ],
   "Sterilization Equipment": [
     {
-      title: "Runyes Dental Autoclave Sterilizer",
+      id: 3,
+      title: "Dental Autoclave Sterilizer",
       description:
-        "Runyes brand tabletop dental autoclave with digital display and programmable controls. Features circular stainless steel chamber with multiple racks, hinged door with blue handle, USB connectivity, and power control. Provides reliable steam sterilization at 121°C or 134°C for surgical and dental instruments.",
+        "Tabletop dental autoclave with digital display and programmable controls. Features circular stainless steel chamber with multiple racks, hinged door with blue handle, USB connectivity, and power control. Provides reliable steam sterilization at 121°C or 134°C for surgical and dental instruments.",
       image: runyes,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "Runyes",
-        },
         {
           title: "Chamber",
           text: "Circular stainless steel with racks",
@@ -165,47 +160,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "WOSON Professional Dental Autoclave",
-      description:
-        "WOSON brand Class B dental autoclave with advanced digital control panel. Features multiple sterilization programs (Unwrapped, Wrapped, Prion, Porous), adjustable temperatures (134°C, 121°C), vacuum and drying cycles, stainless steel chamber with multiple racks, and clear digital displays for temp, pressure, and time monitoring.",
-      image: woson,
-      specifications: [
-        {
-          title: "Manufacturer",
-          text: "WOSON",
-        },
-        {
-          title: "Class",
-          text: "Class B",
-        },
-        {
-          title: "Programs",
-          text: "Unwrapped, Wrapped, Prion, Porous",
-        },
-        {
-          title: "Temperatures",
-          text: "121°C, 134°C selectable",
-        },
-        {
-          title: "Cycles",
-          text: "Vacuum, Sterilization, Drying",
-        },
-        {
-          title: "Display",
-          text: "Digital temp, pressure, time readouts",
-        },
-        {
-          title: "Chamber",
-          text: "Stainless steel with multiple racks",
-        },
-        {
-          title: "Safety",
-          text: "Hot surface warning, secure door lock",
-        },
-      ],
-      certifications: ["CE", "ISO 13485"],
-    },
-    {
+      id: 4,
       title: "Dental Autoclave with Handpiece Cleaner System",
       description:
         "Modern dental autoclave with color touchscreen interface and integrated handpiece flushing system. Features front-loading stainless steel chamber with multiple racks, digital cycle control, water reservoir, and pre-sterilization cleaning attachment. Ensures comprehensive instrument sterilization and reprocessing.",
@@ -242,18 +197,53 @@ export const PRODUCTS = {
       ],
       certifications: ["CE", "ISO 13485"],
     },
+    {
+      id: 5,
+      title: "Professional Dental Autoclave",
+      description:
+        "Class B dental autoclave with advanced digital control panel. Features multiple sterilization programs (Unwrapped, Wrapped, Prion, Porous), adjustable temperatures (134°C, 121°C), vacuum and drying cycles, stainless steel chamber with multiple racks, and clear digital displays for temp, pressure, and time monitoring.",
+      image: woson,
+      specifications: [
+        {
+          title: "Class",
+          text: "Class B",
+        },
+        {
+          title: "Programs",
+          text: "Unwrapped, Wrapped, Prion, Porous",
+        },
+        {
+          title: "Temperatures",
+          text: "121°C, 134°C selectable",
+        },
+        {
+          title: "Cycles",
+          text: "Vacuum, Sterilization, Drying",
+        },
+        {
+          title: "Display",
+          text: "Digital temp, pressure, time readouts",
+        },
+        {
+          title: "Chamber",
+          text: "Stainless steel with multiple racks",
+        },
+        {
+          title: "Safety",
+          text: "Hot surface warning, secure door lock",
+        },
+      ],
+      certifications: ["CE", "ISO 13485"],
+    },
   ],
   "Dental Parts & Accessories": [
     {
-      title: "DTE Piezo Bone Surgery Tips Kit",
+      id: 6,
+      title: "Piezo Bone Surgery Tips Kit",
       description:
-        "Comprehensive DTE piezo bone surgery tips kit with gold-coated titanium tips for ultrasonic bone cutting. Includes multiple curved tip configurations, stainless steel storage racks with silicone inserts, sterilization cassettes, and individual blister packaging for precise oral surgical procedures.",
+        "Comprehensive piezo bone surgery tips kit with gold-coated titanium tips for ultrasonic bone cutting. Includes multiple curved tip configurations, stainless steel storage racks with silicone inserts, sterilization cassettes, and individual blister packaging for precise oral surgical procedures.",
       image: piezo,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "DTE",
-        },
         {
           title: "Coating",
           text: "Gold (likely titanium nitride)",
@@ -286,42 +276,43 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "DTE Piezo Bone Surgery Tips Kit",
+      id: 7,
+      title: "Dental Turbine Rotor Assembly Kit",
       description:
-        "Comprehensive DTE piezo bone surgery tips kit with gold-coated titanium tips for ultrasonic bone cutting. Includes multiple curved tip configurations, stainless steel storage racks with silicone inserts, sterilization cassettes, and individual blister packaging for precise oral surgical procedures.",
+        "Professional replacement rotor assembly for dental turbine handpieces. Complete kit includes air-driven impeller rotor, high-precision ball bearings, O-ring seals, and spacers. Designed for high-speed performance with minimal vibration and friction.",
       image: turbine,
       specifications: [
         {
-          title: "Manufacturer",
-          text: "DTE",
+          title: "Components",
+          text: "Rotor, 2x ball bearings, O-ring, spacers",
         },
         {
-          title: "Coating",
-          text: "Gold (likely titanium nitride)",
+          title: "Rotor_design",
+          text: "Multi-blade air impeller",
+        },
+        {
+          title: "Bearings",
+          text: "High-precision high-speed rated",
         },
         {
           title: "Material",
-          text: "Stainless steel with TiN coating",
+          text: "Stainless steel/metal alloy",
         },
         {
-          title: "Tip Designs",
-          text: "Various curved configurations",
+          title: "Sealing",
+          text: "O-ring and gasket system",
         },
         {
-          title: "Storage",
-          text: "Stainless racks with blue silicone inserts",
+          title: "Compatibility",
+          text: "Standard dental turbine handpieces",
         },
         {
-          title: "Sterilization",
-          text: "Autoclavable cassettes included",
+          title: "Rpm_rating",
+          text: "Suitable for 300,000+ RPM",
         },
         {
-          title: "Packaging",
-          text: "Individual blister packs",
-        },
-        {
-          title: "Applications",
-          text: "Bone grafting, sinus lifts, ridge augmentation, extractions",
+          title: "applications",
+          text: "Turbine maintenance and repair",
         },
       ],
       certifications: ["CE", "ISO 13485"],
@@ -329,15 +320,12 @@ export const PRODUCTS = {
   ],
   "Dental Lab Equipment": [
     {
-      title: "ASIGA Dental 3D Printer (DLP/SLA)",
+      id: 8,
+      title: "Dental 3D Printer (DLP/SLA)",
       description:
-        "Professional ASIGA desktop 3D printer with red translucent UV-filtering cover for high-resolution dental applications. Features touchscreen interface with Print, Control, Settings, and Maintenance menus. Ideal for fabricating dental models, surgical guides, crowns, bridges, and orthodontic appliances.",
+        "Professional desktop 3D printer with red translucent UV-filtering cover for high-resolution dental applications. Features touchscreen interface with Print, Control, Settings, and Maintenance menus. Ideal for fabricating dental models, surgical guides, crowns, bridges, and orthodontic appliances.",
       image: asiga,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "ASIGA",
-        },
         {
           title: "Technology",
           text: "DLP/SLA resin-based 3D printing",
@@ -370,6 +358,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
+      id: 9,
       title: "Dental Aligner Vacuum Forming Machine",
       description:
         "Professional vacuum forming and pressing machine for fabricating custom clear dental aligners. Features red and black housing with heating element, removable clear forming tray, temperature/pressure controls, and white base unit. Essential for orthodontic aligner production.",
@@ -413,6 +402,7 @@ export const PRODUCTS = {
   ],
   "Dental Implants": [
     {
+      id: 10,
       title: "Dental Implant Abutment Screw Set",
       description:
         "Precision dental implant abutment screws for connecting implant fixtures to prosthetic restorations. Manufactured from biocompatible titanium with threaded design for secure attachment. Essential component for dental implantology procedures.",
@@ -456,15 +446,12 @@ export const PRODUCTS = {
   ],
   "Dental Imaging": [
     {
-      title: "DTE i-SCAN Intraoral Scanner",
+      id: 11,
+      title: "i-SCAN Intraoral Scanner",
       description:
-        "Advanced DTE i-SCAN digital impression system with large color touchscreen interface. Features intuitive menu with Patient Card, Register, Settings, Images, and Scan functions. Captures high-resolution 3D digital models for restorative dentistry, orthodontics, and patient communication. Includes memory management and real-time scan display.",
+        "Advanced digital impression system with large color touchscreen interface. Features intuitive menu with Patient Card, Register, Settings, Images, and Scan functions. Captures high-resolution 3D digital models for restorative dentistry, orthodontics, and patient communication. Includes memory management and real-time scan display.",
       image: dte,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "DTE",
-        },
         {
           title: "Model",
           text: "i-SCAN",
@@ -497,6 +484,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
+      id: 12,
       title: "Portable Handheld Dental X-ray with Display",
       description:
         "Innovative portable handheld dental X-ray unit with integrated digital display for immediate image visualization. Features adjustable exposure settings (60kV, 0.36s), comprehensive control panel with multiple imaging modes, collimator cone for beam direction, READY indicator, and ergonomic handle. Eliminates need for separate sensors and monitors.",
@@ -534,15 +522,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "RAYIMAGING Digital Dental Sensor with Touchscreen",
+      id: 13,
+      title: "Digital Dental Sensor with Touchscreen",
       description:
-        "Advanced RAYIMAGING digital dental sensor/detector with color touchscreen interface. Features exposure time display (0.160s), calibrated for 70kV 3mA X-ray parameters, multiple imaging modes with Chinese/English interface, and patient/tooth-specific settings. Combines radiation measurement and digital image capture for quality assurance and diagnosis.",
+        "Advanced digital dental sensor/detector with color touchscreen interface. Features exposure time display (0.160s), calibrated for 70kV 3mA X-ray parameters, multiple imaging modes with Chinese/English interface, and patient/tooth-specific settings. Combines radiation measurement and digital image capture for quality assurance and diagnosis.",
       image: digitalSensor,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "RAYIMAGING",
-        },
         {
           title: "Display",
           text: "Color touchscreen with icon-based UI",
@@ -571,15 +556,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "Mayar Med Portable Digital X-ray Imaging System",
+      id: 14,
+      title: "Portable Digital X-ray Imaging System",
       description:
-        "Complete portable digital X-ray system by Mayar Med with generator, digital detector plate, and laptop display. Features adjustable collimator with control knobs, comprehensive button panel for exposure settings, immediate digital output for chest and body imaging. Ideal for point-of-care diagnostics in emergency rooms, ICUs, mobile units, and veterinary applications.",
+        "Complete portable digital X-ray system with generator, digital detector plate, and laptop display. Features adjustable collimator with control knobs, comprehensive button panel for exposure settings, immediate digital output for chest and body imaging. Ideal for point-of-care diagnostics in emergency rooms, ICUs, mobile units, and veterinary applications.",
       image: mayar,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "Mayar Med",
-        },
         {
           title: "Generator",
           text: "Portable X-ray with handle",
@@ -608,6 +590,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
+      id: 15,
       title: "Professional Dental Intraoral Scanner (Blue)",
       description:
         "Modern blue and white intraoral scanner with integrated orthodontic software. Features ergonomic pen-like handpiece design, wired connectivity with docking station, software with 3D tooth rendering and color-coded accuracy mapping. Ideal for digital impressions, orthodontic treatment planning, clear aligner fabrication, and treatment monitoring.",
@@ -645,19 +628,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "VITARO Portable Dental X-ray Unit (Made in Korea)",
+      id: 16,
+      title: "Portable Dental X-ray Unit",
       description:
-        "VITARO brand portable dental X-ray unit manufactured in Korea. Features digital display with 60kV and 2mA settings, 0.35s exposure time, battery-powered operation, tooth and patient positioning icons, radiation safety indicator, and intuitive button controls. Compact design for intraoral radiography, caries detection, and dental diagnostics.",
+        "Portable dental X-ray unit with digital display with 60kV and 2mA settings, 0.35s exposure time, battery-powered operation, tooth and patient positioning icons, radiation safety indicator, and intuitive button controls. Compact design for intraoral radiography, caries detection, and dental diagnostics.",
       image: vitaro,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "VITARO",
-        },
-        {
-          title: "Origin",
-          text: "Made in Korea",
-        },
         {
           title: "Kilovoltage",
           text: "60kV",
@@ -686,6 +662,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
+      id: 17,
       title: "Portable Dental X-ray Unit with Digital Display",
       description:
         "Compact and lightweight portable dental X-ray unit designed for exceptional mobility and ease of use. Features a vibrant digital display showing adjustable voltage (60kV), precise exposure times (adjustable to 2.00s), and intuitive control panel with pre-set imaging modes for various dental applications. The integrated carrying strap enhances portability, making it ideal for multi-operatory practices and mobile dental services. Battery-powered for cordless freedom and versatile deployment.",
@@ -727,6 +704,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
+      id: 18,
       title: "Handheld Intraoral Dental X-Ray Unit",
       description:
         "Ergonomic handheld intraoral dental X-ray unit with portable design for comfortable operation and precise positioning. Features digital LCD screen with user-friendly button interface for quick selection of optimal exposure settings. The lightweight, compact, and fully integrated design makes it exceptionally portable and easy to maneuver. Ideal for intraoral imaging applications including caries detection, periodontal assessment, endodontic evaluations, and pre-implant diagnostics.",
@@ -770,6 +748,7 @@ export const PRODUCTS = {
   ],
   "Dental Equipment": [
     {
+      id: 19,
       title: "Dental Headlight with Magnification Loupes",
       description:
         "Professional head-mounted LED illumination system with integrated magnification loupes for enhanced visualization during dental procedures. Features adjustable headband, dual LED lights, and interchangeable magnifying lenses for optimal precision.",
@@ -811,15 +790,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
+      id: 20,
       title: "Professional Dental Loupes Set",
       description:
-        "German-engineered precision dental loupes with multiple mounting options. Available with integrated LED illumination for shadow-free visibility. Perfect for restorative dentistry, surgery, and detailed examination work.",
+        "Precision dental loupes with multiple mounting options. Available with integrated LED illumination for shadow-free visibility. Perfect for restorative dentistry, surgery, and detailed examination work.",
       image: dentalLoupes,
       specifications: [
-        {
-          title: "Origin",
-          text: "Made in Germany",
-        },
         {
           title: "Magnification",
           text: "2.5x, 3.5x, 4.5x, 5.5x options",
@@ -834,7 +810,7 @@ export const PRODUCTS = {
         },
         {
           title: "Optics",
-          text: "High-quality German optical glass",
+          text: "High-quality optical glass",
         },
         {
           title: "Adjustment",
@@ -852,7 +828,8 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "APEX Digital Apex Locator",
+      id: 21,
+      title: "Digital Apex Locator",
       description:
         "Advanced electronic apex locator with large touchscreen display for precise root canal length measurement. Features intuitive interface with visual and audible feedback for accurate endodontic procedures.",
       image: apex,
@@ -893,15 +870,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "Propex Pixi Apex Locator (Dentsply)",
+      id: 22,
+      title: "Electronic Apex Locator",
       description:
-        "Dentsply Maillefer Propex Pixi electronic apex locator with multi-segment digital display. Provides precise canal length measurements with color-coded visual feedback and numerical scale for successful endodontic treatment.",
+        "Electronic apex locator with multi-segment digital display. Provides precise canal length measurements with color-coded visual feedback and numerical scale for successful endodontic treatment.",
       image: apexPixi,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "Dentsply Maillefer",
-        },
         {
           title: "Display Type",
           text: "Multi-segment digital with color bars",
@@ -934,7 +908,8 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "ALLADIN LED Curing Light",
+      id: 23,
+      title: "LED Curing Light",
       description:
         "Cordless LED dental curing light for polymerizing composite resins and bonding materials. Features digital display, multiple curing modes, adjustable timer, and ergonomic handheld design for efficient restorative procedures.",
       image: alladin,
@@ -975,170 +950,7 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "Complete Dental Treatment Unit with LED Light",
-      description:
-        "Integrated dental workstation featuring patient chair with multi-segment positioning, articulated LED operating light, instrument delivery system with multiple handpiece connections, digital control panel, and ergonomic design for comprehensive dental procedures.",
-      image: completeDental,
-      specifications: [
-        {
-          title: "Chair",
-          text: "Multi-position reclining with headrest",
-        },
-        {
-          title: "Light",
-          text: "Multi-LED shadowless illumination",
-        },
-        {
-          title: "Delivery System",
-          text: "Articulated arm with handpiece holders",
-        },
-        {
-          title: "Control Panel",
-          text: "Digital touchscreen interface",
-        },
-        {
-          title: "Spittoon",
-          text: "Integrated cuspidor with suction",
-        },
-        {
-          title: "Foot Control",
-          text: "Pneumatic foot pedal included",
-        },
-        {
-          title: "Upholstery",
-          text: "Medical-grade leather",
-        },
-        {
-          title: "Design",
-          text: "Ergonomic modular system",
-        },
-      ],
-      certifications: ["CE", "ISO 13485"],
-    },
-    {
-      title: "DAC Professional Dental Treatment Unit",
-      description:
-        "High-end DAC dental treatment unit with complete operatory setup. Features ergonomic patient chair, advanced LED lighting, multiple handpiece delivery system, digital control panel, assistant station, and professional stool. Designed for comprehensive dental practice.",
-      image: dacChair,
-      specifications: [
-        {
-          title: "Manufacturer",
-          text: "DAC/DCI",
-        },
-        {
-          title: "Chair Type",
-          text: "Fully adjustable patient chair",
-        },
-        {
-          title: "Lighting",
-          text: "Articulated LED surgical light",
-        },
-        {
-          title: "Handpieces",
-          text: "Multiple connection ports",
-        },
-        {
-          title: "Control System",
-          text: "Digital display with presets",
-        },
-        {
-          title: "Suction",
-          text: "HVE and SE integrated",
-        },
-        {
-          title: "Stool",
-          text: "Height-adjustable professional stool",
-        },
-        {
-          title: "Finish",
-          text: "Premium upholstery and chrome accents",
-        },
-      ],
-      certifications: ["CE", "ISO 13485", "FDA"],
-    },
-    {
-      title: "Integrated Dental Operatory with Patient Monitoring",
-      description:
-        "Advanced integrated dental operatory unit with patient chair, multi-LED surgical light, mobile instrument delivery cart, and integrated vital signs monitor. Features digital display for real-time monitoring of heart rate, blood pressure, and oxygen saturation during procedures.",
-      image: dentalOperatory,
-      specifications: [
-        {
-          title: "Chair",
-          text: "Electric with programmable positions",
-        },
-        {
-          title: "Monitor",
-          text: "Vital signs display (HR, BP, SpO2)",
-        },
-        {
-          title: "Lighting",
-          text: "Multi-faceted LED with brightness control",
-        },
-        {
-          title: "Delivery Cart",
-          text: "Mobile with multiple handpiece holders",
-        },
-        {
-          title: "Control Panel",
-          text: "Digital with preset programs",
-        },
-        {
-          title: "Mounting",
-          text: "Articulated arms for monitor and light",
-        },
-        {
-          title: "Footpedal",
-          text: "Pneumatic control included",
-        },
-        {
-          title: "Features",
-          text: "Real-time patient monitoring integration",
-        },
-      ],
-      certifications: ["CE", "ISO 13485", "FDA"],
-    },
-    {
-      title: "Modern Dental Treatment Chair Unit (Premium Black)",
-      description:
-        "Comprehensive dental treatment unit with sleek black upholstery. Includes fully adjustable patient chair, integrated instrument delivery console with digital controls, articulated examination light, ceramic spittoon with faucet, and ergonomic dentist stool. All-in-one modern operatory solution.",
-      image: modernDental,
-      specifications: [
-        {
-          title: "Upholstery",
-          text: "Black medical-grade leather/vinyl",
-        },
-        {
-          title: "Chair Adjustment",
-          text: "Multi-position reclining with headrest",
-        },
-        {
-          title: "Handpiece Holders",
-          text: "5+ instrument connections",
-        },
-        {
-          title: "Control Panel",
-          text: "Digital touchscreen interface",
-        },
-        {
-          title: "Bowl",
-          text: "Ceramic with integrated faucet",
-        },
-        {
-          title: "Light",
-          text: "Multi-LED articulated examination light",
-        },
-        {
-          title: "Stool",
-          text: "Mobile with five-star base",
-        },
-        {
-          title: "Design",
-          text: "Contemporary streamlined aesthetic",
-        },
-      ],
-      certifications: ["CE", "ISO 13485"],
-    },
-    {
+      id: 24,
       title: "Wireless Endodontic Rotary System",
       description:
         "Professional wireless motor-driven endodontic handpiece system for root canal procedures. Features angled handpiece with rotary file mechanism, separate control unit with speed/torque settings, and foot pedal operation. Designed for precision endodontic treatment with minimal cable clutter.",
@@ -1180,15 +992,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "EASYDENT Cordless Endodontic Obturation Gun",
+      id: 25,
+      title: "Cordless Endodontic Obturation Gun",
       description:
-        "Professional cordless obturation gun for root canal therapy by EASYDENT. Features ergonomic design, angled delivery tip for posterior access, digital temperature control, and rechargeable battery. Delivers heated gutta-percha for precise canal filling and sealing.",
+        "Professional cordless obturation gun for root canal therapy. Features ergonomic design, angled delivery tip for posterior access, digital temperature control, and rechargeable battery. Delivers heated gutta-percha for precise canal filling and sealing.",
       image: cordLess,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "EASYDENT",
-        },
         {
           title: "Power",
           text: "Cordless rechargeable battery",
@@ -1221,15 +1030,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485", "FDA"],
     },
     {
-      title: "EASYDOC Cordless Warm Vertical Condensation Device",
+      id: 26,
+      title: "Cordless Warm Vertical Condensation Device",
       description:
-        "Advanced EASYDOC cordless obturation device for warm vertical condensation and continuous wave root canal filling. Features contra-angle design with fine heated applicator tip, battery operation, and precision temperature control for optimal gutta-percha delivery.",
+        "Advanced cordless obturation device for warm vertical condensation and continuous wave root canal filling. Features contra-angle design with fine heated applicator tip, battery operation, and precision temperature control for optimal gutta-percha delivery.",
       image: cordLessWarm,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "EASYDOC",
-        },
         {
           title: "Technique",
           text: "Warm vertical condensation",
@@ -1262,19 +1068,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "KAVO PROPHYflex 4 Air Polishing Handpiece",
+      id: 27,
+      title: "Air Polishing Handpiece",
       description:
-        "Premium KAVO PROPHYflex 4 dental air polishing system for professional teeth cleaning. Features ergonomic pistol-grip design, transparent powder reservoir for easy monitoring, detachable angled nozzle, and high-efficiency stain and plaque removal technology.",
+        "Premium dental air polishing system for professional teeth cleaning. Features ergonomic pistol-grip design, transparent powder reservoir for easy monitoring, detachable angled nozzle, and high-efficiency stain and plaque removal technology.",
       image: kavo,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "KAVO",
-        },
-        {
-          title: "Model",
-          text: "PROPHYflex 4",
-        },
         {
           title: "Design",
           text: "Ergonomic pistol-grip",
@@ -1303,19 +1102,12 @@ export const PRODUCTS = {
       certifications: ["CE", "ISO 13485"],
     },
     {
-      title: "DTE Endo R+ Woodpecker Endodontic Motor System",
+      id: 28,
+      title: "Endodontic Motor System",
       description:
-        "Advanced DTE Endo R+ W3-Pro WOODPECKER endodontic motor with integrated apex locator. Features color digital display, programmable speed/torque control, cordless handpiece with contra-angle attachment, and real-time root canal length measurement for precise treatment.",
+        "Advanced endodontic motor with integrated apex locator. Features color digital display, programmable speed/torque control, cordless handpiece with contra-angle attachment, and real-time root canal length measurement for precise treatment.",
       image: dteEndor,
       specifications: [
-        {
-          title: "Manufacturer",
-          text: "DTE / Woodpecker",
-        },
-        {
-          title: "Model",
-          text: "Endo R+ W3-Pro",
-        },
         {
           title: "Display",
           text: "Color digital LCD with visual indicators",
@@ -1342,6 +1134,172 @@ export const PRODUCTS = {
         },
       ],
       certifications: ["CE", "ISO 13485", "FDA"],
+    },
+  ],
+  "Medical Chair": [
+    {
+      id: 29,
+      title: "Complete Dental Treatment Unit with LED Light",
+      description:
+        "Integrated dental workstation featuring patient chair with multi-segment positioning, articulated LED operating light, instrument delivery system with multiple handpiece connections, digital control panel, and ergonomic design for comprehensive dental procedures.",
+      image: completeDental,
+      specifications: [
+        {
+          title: "Chair",
+          text: "Multi-position reclining with headrest",
+        },
+        {
+          title: "Light",
+          text: "Multi-LED shadowless illumination",
+        },
+        {
+          title: "Delivery System",
+          text: "Articulated arm with handpiece holders",
+        },
+        {
+          title: "Control Panel",
+          text: "Digital touchscreen interface",
+        },
+        {
+          title: "Spittoon",
+          text: "Integrated cuspidor with suction",
+        },
+        {
+          title: "Foot Control",
+          text: "Pneumatic foot pedal included",
+        },
+        {
+          title: "Upholstery",
+          text: "Medical-grade leather",
+        },
+        {
+          title: "Design",
+          text: "Ergonomic modular system",
+        },
+      ],
+      certifications: ["CE", "ISO 13485"],
+    },
+    {
+      id: 30,
+      title: "Professional Dental Treatment Unit",
+      description:
+        "High-end dental treatment unit with complete operatory setup. Features ergonomic patient chair, advanced LED lighting, multiple handpiece delivery system, digital control panel, assistant station, and professional stool. Designed for comprehensive dental practice.",
+      image: dacChair,
+      specifications: [
+        {
+          title: "Chair Type",
+          text: "Fully adjustable patient chair",
+        },
+        {
+          title: "Lighting",
+          text: "Articulated LED surgical light",
+        },
+        {
+          title: "Handpieces",
+          text: "Multiple connection ports",
+        },
+        {
+          title: "Control System",
+          text: "Digital display with presets",
+        },
+        {
+          title: "Suction",
+          text: "HVE and SE integrated",
+        },
+        {
+          title: "Stool",
+          text: "Height-adjustable professional stool",
+        },
+        {
+          title: "Finish",
+          text: "Premium upholstery and chrome accents",
+        },
+      ],
+      certifications: ["CE", "ISO 13485", "FDA"],
+    },
+    {
+      id: 31,
+      title: "Integrated Dental Operatory with Patient Monitoring",
+      description:
+        "Advanced integrated dental operatory unit with patient chair, multi-LED surgical light, mobile instrument delivery cart, and integrated vital signs monitor. Features digital display for real-time monitoring of heart rate, blood pressure, and oxygen saturation during procedures.",
+      image: dentalOperatory,
+      specifications: [
+        {
+          title: "Chair",
+          text: "Electric with programmable positions",
+        },
+        {
+          title: "Monitor",
+          text: "Vital signs display (HR, BP, SpO2)",
+        },
+        {
+          title: "Lighting",
+          text: "Multi-faceted LED with brightness control",
+        },
+        {
+          title: "Delivery Cart",
+          text: "Mobile with multiple handpiece holders",
+        },
+        {
+          title: "Control Panel",
+          text: "Digital with preset programs",
+        },
+        {
+          title: "Mounting",
+          text: "Articulated arms for monitor and light",
+        },
+        {
+          title: "Footpedal",
+          text: "Pneumatic control included",
+        },
+        {
+          title: "Features",
+          text: "Real-time patient monitoring integration",
+        },
+      ],
+      certifications: ["CE", "ISO 13485", "FDA"],
+    },
+    {
+      id: 32,
+      title: "Modern Dental Treatment Chair Unit (Premium Black)",
+      description:
+        "Comprehensive dental treatment unit with sleek black upholstery. Includes fully adjustable patient chair, integrated instrument delivery console with digital controls, articulated examination light, ceramic spittoon with faucet, and ergonomic dentist stool. All-in-one modern operatory solution.",
+      image: modernDental,
+      specifications: [
+        {
+          title: "Upholstery",
+          text: "Black medical-grade leather/vinyl",
+        },
+        {
+          title: "Chair Adjustment",
+          text: "Multi-position reclining with headrest",
+        },
+        {
+          title: "Handpiece Holders",
+          text: "5+ instrument connections",
+        },
+        {
+          title: "Control Panel",
+          text: "Digital touchscreen interface",
+        },
+        {
+          title: "Bowl",
+          text: "Ceramic with integrated faucet",
+        },
+        {
+          title: "Light",
+          text: "Multi-LED articulated examination light",
+        },
+        {
+          title: "Stool",
+          text: "Mobile with five-star base",
+        },
+        {
+          title: "Design",
+          text: "Contemporary streamlined aesthetic",
+        },
+      ],
+      certifications: ["CE", "ISO 13485"],
     },
   ],
 };
