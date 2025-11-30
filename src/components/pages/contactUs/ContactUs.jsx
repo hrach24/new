@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./ContactU.scss";
 import LocationSvg from "@/assets/icons/location.svg?react";
 import PhoneSvg from "@/assets/icons/phone.svg?react";
-import EmailSvg from "@/assets/icons/email.svg?react";
 import HoursSvg from "@/assets/icons/hours.svg?react";
 import "aos/dist/aos.css";
 import AOS from "aos";
