@@ -3,7 +3,7 @@ import "./Footer.scss";
 import logo from "@/assets/images/header/logo.webp";
 import EmailSvg from "@/assets/icons/email.svg?react";
 import LocationSvg from "@/assets/icons/location.svg?react";
-import PhoneSvg from "@/assets/icons/Phone.svg?react";
+import PhoneSvg from "@/assets/icons/phone.svg?react";
 import { Link } from "react-router-dom";
 const FOOTER_LIST = [
   {
