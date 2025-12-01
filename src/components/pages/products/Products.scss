@@ -37,29 +37,131 @@
 
 .products__buttonsWrapper {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  @media screen and (max-width: 660px) {
+    flex-direction: column;
+  }
+}
+
+.products__search__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 18.75rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(156 163 175);
+}
+
+.products__search {
+  display: flex;
+  width: 100%;
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: rgb(156 163 175);
+  }
 }
 
 .products__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc((100% - 5 * 0.5rem) / 6);
+  width: 100%;
   margin: 0;
   padding: 1rem 0.5rem;
-  border-radius: 0.325rem;
   border: none;
   gap: 0.325rem;
+  font-size: 0.875rem;
+  color: black;
+  background-color: white;
+  &:not(.active__category):hover {
+    background-color: rgb(202 202 202);
+    color: white;
+  }
   &:active {
     transform: translateY(0.0625rem);
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid black;
   }
 }
 
 .active__category {
   background: rgb(249 115 22);
   color: white;
+}
+
+.search__icon {
+  display: flex;
+  width: 1.5rem;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.product__category__wrapper {
+  display: flex;
+  position: relative;
+}
+
+.product__category {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.875rem;
+  width: 15.625rem;
+  border: 1px solid rgb(156 163 175);
+  border-radius: 0.625rem;
+  color: white;
+  position: relative;
+  @media screen and (max-width: 660px) {
+    padding: 0.725rem 0.875rem;
+    max-width: 18.75rem;
+    width: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.down__icon {
+  display: flex;
+  width: 1.25rem;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.products__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 13.75rem;
+  width: 100%;
+  border: 1px solid rgb(156 163 175);
+  border-radius: 0.625rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.closer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
 }

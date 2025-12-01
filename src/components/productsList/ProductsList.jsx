@@ -2,7 +2,6 @@ import React from "react";
 import "./ProductsList.scss";
 import logo from "@/assets/images/header/logo.webp";
 const ProductsList = ({ data, selectedCategory }) => {
-  console.log(data);
   return (
     <ul className={"products__list"}>
       {data.map((item) => (

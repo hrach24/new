@@ -27,12 +27,13 @@ const Header = () => {
           </Link>
           <ul className={"header__ist"}>
             {HEADER__LINKS.map((item) => (
-              <li
-                className={classNames("header__ist__item", {
-                  active__link: item.route === location.pathname,
-                })}
-              >
-                <Link className={"header__ist__link"} to={item.route}>
+              <li className={"header__ist__item"}>
+                <Link
+                  className={classNames("header__ist__link", {
+                    active__link: item.route === location.pathname,
+                  })}
+                  to={item.route}
+                >
                   {item.title}
                 </Link>
               </li>

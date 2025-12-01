@@ -4,6 +4,7 @@ import logo from "@/assets/images/header/logo.webp";
 import EmailSvg from "@/assets/icons/email.svg?react";
 import LocationSvg from "@/assets/icons/location.svg?react";
 import PhoneSvg from "@/assets/icons/phone.svg?react";
+import TelegramSvg from "@/assets/icons/telegram.svg?react";
 import { Link } from "react-router-dom";
 const FOOTER_LIST = [
   {
@@ -91,24 +92,24 @@ const Footer = () => {
         <div className={"footer__stayUpdated__description"}>
           Subscribe to our newsletter for the latest news and product updates
         </div>
-        {/*<div className={"footer__subscribe"}>*/}
-        {/*  <div className={"email__wrapper"}>*/}
-        {/*    <div className={"email__svgWrapper"}>*/}
-        {/*      <EmailSvg />*/}
-        {/*    </div>*/}
-        {/*    <input*/}
-        {/*      type="text"*/}
-        {/*      className={"email__input"}*/}
-        {/*      placeholder={"Enter your email"}*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*  <button className={"footer__subscribe__button"}>*/}
-        {/*    <span className={"footer__subscribe__button__icon"}>*/}
-        {/*      <TelegramSvg />*/}
-        {/*    </span>*/}
-        {/*    <span>Subscribe</span>*/}
-        {/*  </button>*/}
-        {/*</div>*/}
+        <div className={"footer__subscribe"}>
+          <div className={"email__wrapper"}>
+            <div className={"email__svgWrapper"}>
+              <EmailSvg />
+            </div>
+            <input
+              type="text"
+              className={"email__input"}
+              placeholder={"Enter your email"}
+            />
+          </div>
+          <button className={"footer__subscribe__button"}>
+            <span className={"footer__subscribe__button__icon"}>
+              <TelegramSvg />
+            </span>
+            <span>Subscribe</span>
+          </button>
+        </div>
       </div>
       <div className={"footer__links"}>
         <div className={"container"}>
