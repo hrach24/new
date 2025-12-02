@@ -8,7 +8,12 @@ const Product = ({ clickedProduct, setClickedProduct }) => {
       <div className={"product__wrapper"}>
         <div
           className={"product__closer"}
-          onClick={() => setClickedProduct(null)}
+          onClick={() => {
+            setClickedProduct(null);
+            document
+              .getElementsByTagName("html")[0]
+              .classList.remove("no-scroll");
+          }}
         />
         <div className={"product"}>
           <div className={"product__content"}>
@@ -16,7 +21,12 @@ const Product = ({ clickedProduct, setClickedProduct }) => {
               <span>{clickedProduct.title}</span>
               <div
                 className={"close__icon"}
-                onClick={() => setClickedProduct(null)}
+                onClick={() => {
+                  setClickedProduct(null);
+                  document
+                    .getElementsByTagName("html")[0]
+                    .classList.remove("no-scroll");
+                }}
               >
                 <CloseIconSvg />
               </div>

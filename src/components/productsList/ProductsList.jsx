@@ -6,6 +6,12 @@ import { PRODUCTS } from "@/utils/products.js";
 
 const ProductsList = ({ data, selectedCategory }) => {
   const [clickedProduct, setClickedProduct] = useState(null);
+
+  const clickedItem = (itemId) => {
+    document.getElementsByTagName("html")[0].classList.add("no-scroll");
+    setClickedProduct(PRODUCTS[selectedCategory].find((i) => i.id === itemId));
+  };
+
   return (
     <>
       <ul className={"products__list"}>
@@ -14,11 +20,7 @@ const ProductsList = ({ data, selectedCategory }) => {
             className={"products__list__item"}
             data-aos={"fade-up"}
             key={item.id}
-            onClick={() => {
-              setClickedProduct(
-                PRODUCTS[selectedCategory].find((i) => i.id === item.id),
-              );
-            }}
+            onClick={() => clickedItem(item.id)}
           >
             <div className={"products__list__item__img"}>
               <img src={item.image} alt={item.title} />
