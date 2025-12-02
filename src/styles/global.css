@@ -1,6 +1,9 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    &:has([data-aos]) {
+        overflow-x: clip;
+    }
 }
 
 body {
@@ -11,13 +14,28 @@ body {
     background-position: left center;
     background-size: cover;
     user-select: none;
+    &:has([data-aos]) {
+        overflow-x: clip;
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgb(249 115 22);
+        border-radius: 10rem;
+    }
     /*overflow-x: clip;*/
 }
 
-html:has([data-aos]),
-body:has([data-aos]) {
-    overflow-x: clip;
-}
+/*html:has([data-aos]),*/
+/*body:has([data-aos]) {*/
+/*    overflow-x: clip;*/
+/*}*/
 
 *,
 *::before,
