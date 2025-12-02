@@ -5,11 +5,11 @@ import CloseIconSvg from "@/assets/icons/close-icon.svg?react";
 const Product = ({ clickedProduct, setClickedProduct }) => {
   return (
     <>
-      <div
-        className={"product__closer"}
-        onClick={() => setClickedProduct(null)}
-      ></div>
       <div className={"product__wrapper"}>
+        <div
+          className={"product__closer"}
+          onClick={() => setClickedProduct(null)}
+        />
         <div className={"product"}>
           <div className={"product__content"}>
             <div className={"product__title"}>
