@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import "./ProductsList.scss";
 import logo from "@/assets/images/header/logo.webp";
 import Product from "@/components/productsList/product/Product.jsx";
-import { PRODUCTS } from "@/utils/products.js";
 
-const ProductsList = ({ data, selectedCategory }) => {
+const ProductsList = ({ data, selectedCategoryName }) => {
+  console.log(selectedCategoryName);
   const [clickedProduct, setClickedProduct] = useState(null);
 
   const clickedItem = (itemId) => {
     document.getElementsByTagName("html")[0].classList.add("no-scroll");
-    setClickedProduct(PRODUCTS[selectedCategory].find((i) => i.id === itemId));
+    const product = data.find((item) => item.id === itemId);
+    setClickedProduct(product);
   };
 
   return (
@@ -24,7 +25,7 @@ const ProductsList = ({ data, selectedCategory }) => {
           >
             <div className={"products__list__item__img"}>
               <img src={item.image} alt={item.title} />
-              <div className={"list__category"}>{selectedCategory}</div>
+              <div className={"list__category"}>{selectedCategoryName}</div>
               <div className={"brand__logo"}>
                 <img src={logo} alt={"logo"} />
               </div>
@@ -37,10 +38,10 @@ const ProductsList = ({ data, selectedCategory }) => {
                 {item.description}
               </div>
               <div className={"products__list__item_certifications__wrapper"}>
-                {item.certifications.map((certification) => (
+                {item.certifications.map((certification, index) => (
                   <div
                     className={"products__list__item_certification small"}
-                    key={certification.title}
+                    key={index}
                   >
                     {certification}
                   </div>

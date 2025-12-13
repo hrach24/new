@@ -12,8 +12,9 @@ import { useTranslation } from "react-i18next";
 const Products = () => {
   const { t, i18n } = useTranslation();
 
+  // Default to "dentalEquipment" (the key, not the title)
   const [selectedCategory, setSelectedCategory] =
-    React.useState("Dental Equipment");
+    React.useState("dentalEquipment");
   const [showCategoryDropDown, setShowCategoryDropDown] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState("");
 
@@ -21,27 +22,33 @@ const Products = () => {
     AOS.init({});
   }, []);
 
-  const categoryKeys = Object.keys(PRODUCTS);
+  // Find the selected category object by key
+  const selectedCategoryObj =
+    PRODUCTS.find((cat) => cat.key === selectedCategory) || PRODUCTS[0];
+  console.log(selectedCategoryObj);
 
   // Get translated category names
-  const translatedCategories = categoryKeys.map((key) => ({
-    key,
-    name: t(`categories.${key}`),
-    count: PRODUCTS[key].length,
+  const translatedCategories = PRODUCTS.map((category) => ({
+    key: category.key,
+    name: t(`categories.${category.title}`), // Use the key for translation
+    count: category.items.length,
   }));
 
-  const currentCategoryName = t(`categories.${selectedCategory}`);
+  // Get the translated name for the selected category
+  const currentCategoryName = selectedCategoryObj
+    ? t(`categories.${selectedCategoryObj.title}`)
+    : t(`categories.dentalEquipment`);
 
   const filteredProducts = useMemo(() => {
-    const categoryProducts = PRODUCTS[selectedCategory] || [];
+    const categoryItems = selectedCategoryObj?.items || [];
 
-    if (!searchQuery.trim()) return categoryProducts;
+    if (!searchQuery.trim()) return categoryItems;
 
     const query = searchQuery.toLowerCase().trim();
-    return categoryProducts.filter((product) =>
+    return categoryItems.filter((product) =>
       t(`products.${product.id}.title`).toLowerCase().includes(query),
     );
-  }, [selectedCategory, searchQuery, t]);
+  }, [selectedCategory, searchQuery, t, selectedCategoryObj]);
 
   // Apply translations to products
   const translatedProducts = filteredProducts.map((product) => ({
@@ -132,7 +139,7 @@ const Products = () => {
         ) : (
           <ProductsList
             data={translatedProducts}
-            selectedCategory={currentCategoryName}
+            selectedCategoryName={currentCategoryName} // Pass the translated name
           />
         )}
       </div>

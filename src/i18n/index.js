@@ -13,18 +13,19 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // detects language from browser/localStorage
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
     fallbackLng: "en",
     supportedLngs: ["en", "zh", "kr"],
     interpolation: {
-      escapeValue: false, // React already escapes
+      escapeValue: false,
     },
     detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
+      order: ["localStorage", "navigator"], // CHECKS localStorage FIRST
+      caches: ["localStorage"], // SAVES to localStorage
+      lookupLocalStorage: "i18nextLng",
     },
   });
 
