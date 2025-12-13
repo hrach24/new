@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import "./Products.scss";
 import { PRODUCTS } from "@/utils/products.js";
 import ProductsList from "@/components/productsList/ProductsList.jsx";
@@ -7,88 +7,110 @@ import SearchSvg from "@/assets/icons/search.svg?react";
 import DownSvg from "@/assets/icons/arrow-down.svg?react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 const Products = () => {
+  const { t, i18n } = useTranslation();
+
+  const [selectedCategory, setSelectedCategory] =
+    React.useState("Dental Equipment");
+  const [showCategoryDropDown, setShowCategoryDropDown] = React.useState(false);
+  const [searchQuery, setSearchQuery] = React.useState("");
+
   useEffect(() => {
     AOS.init({});
   }, []);
 
-  const [selectedCategory, setSelectedCategory] = useState("Dental Equipment");
-  const [showCategoryDropDown, setShowCategoryDropDown] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const categoryKeys = Object.keys(PRODUCTS);
 
-  const categoryButtons = Object.keys(PRODUCTS);
+  // Get translated category names
+  const translatedCategories = categoryKeys.map((key) => ({
+    key,
+    name: t(`categories.${key}`),
+    count: PRODUCTS[key].length,
+  }));
+
+  const currentCategoryName = t(`categories.${selectedCategory}`);
 
   const filteredProducts = useMemo(() => {
     const categoryProducts = PRODUCTS[selectedCategory] || [];
 
-    if (!searchQuery.trim()) {
-      return categoryProducts;
-    }
+    if (!searchQuery.trim()) return categoryProducts;
 
     const query = searchQuery.toLowerCase().trim();
     return categoryProducts.filter((product) =>
-      product.title.toLowerCase().trim().includes(query),
+      t(`products.${product.id}.title`).toLowerCase().includes(query),
     );
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, t]);
+
+  // Apply translations to products
+  const translatedProducts = filteredProducts.map((product) => ({
+    ...product,
+    title: t(`products.${product.id}.title`),
+    description: t(`products.${product.id}.description`),
+  }));
 
   return (
-    <div className={"products"}>
-      <div className={"container"}>
-        <div className={"products__content"} data-aos={"fade-up"}>
-          <div className={"products__content__title large"}>Our Products</div>
-          <div className={"products__content__description medium"}>
-            Premium medical products designed for professional healthcare
-            environments
+    <div className="products">
+      <div className="container">
+        <div className="products__content" data-aos="fade-up">
+          <div className="products__content__title large">
+            {t("ourProducts")}
+          </div>
+          <div className="products__content__description medium">
+            {t("description")}
           </div>
         </div>
       </div>
-      <div className={"products__buttons"}>
-        <div className={"container"}>
-          <div className={"products__buttonsWrapper"}>
-            <div className={"products__search__wrapper"}>
-              <div className={"search__icon"}>
+
+      <div className="products__buttons">
+        <div className="container">
+          <div className="products__buttonsWrapper">
+            <div className="products__search__wrapper">
+              <div className="search__icon">
                 <SearchSvg />
               </div>
               <input
                 type="text"
-                className={"products__search"}
-                placeholder={"Search..."}
+                className="products__search"
+                placeholder={t("searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-            <div className={"product__category__wrapper"}>
+
+            <div className="product__category__wrapper">
               <div
-                className={"product__category"}
+                className="product__category"
                 onClick={() => setShowCategoryDropDown(!showCategoryDropDown)}
               >
-                <div className={"category"}>{selectedCategory}</div>
-                <div className={"down__icon"}>
+                <div className="category">{currentCategoryName}</div>
+                <div className="down__icon">
                   <DownSvg />
                 </div>
               </div>
+
               {showCategoryDropDown && (
                 <>
                   <div
-                    className={"closer"}
+                    className="closer"
                     onClick={() => setShowCategoryDropDown(false)}
-                  ></div>
-                  <div className={"products__wrapper"}>
-                    {categoryButtons.map((button) => (
+                  />
+                  <div className="products__wrapper">
+                    {translatedCategories.map(({ key, name, count }) => (
                       <button
-                        key={button}
+                        key={key}
                         className={classNames("products__button", {
-                          active__category: button === selectedCategory,
+                          active__category: key === selectedCategory,
                         })}
                         onClick={() => {
-                          setSelectedCategory(button);
+                          setSelectedCategory(key);
                           setShowCategoryDropDown(false);
                           setSearchQuery("");
                         }}
                       >
-                        <span>{button}</span>
-                        <span>({PRODUCTS[button].length})</span>
+                        <span>{name}</span>
+                        <span>({count})</span>
                       </button>
                     ))}
                   </div>
@@ -98,22 +120,19 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <div className={"container"}>
-        {/* Show search results count */}
-        {/*{searchQuery && (*/}
-        {/*  <div className={"search-results-info"}>*/}
-        {/*    Found {filteredProducts.length} result*/}
-        {/*    {filteredProducts.length !== 1 ? "s" : ""} for "{searchQuery}"*/}
-        {/*  </div>*/}
-        {/*)}*/}
-        {searchQuery && filteredProducts.length === 0 ? (
-          <div className={"no-results"}>
-            No products found matching "{searchQuery}" in {selectedCategory}
+
+      <div className="container">
+        {searchQuery && translatedProducts.length === 0 ? (
+          <div className="no-results">
+            {t("noResults", {
+              query: searchQuery,
+              category: currentCategoryName,
+            })}
           </div>
         ) : (
           <ProductsList
-            data={filteredProducts}
-            selectedCategory={selectedCategory}
+            data={translatedProducts}
+            selectedCategory={currentCategoryName}
           />
         )}
       </div>

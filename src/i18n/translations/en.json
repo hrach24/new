@@ -1,0 +1,149 @@
+{
+  "ourProducts": "Our Products",
+  "description": "Premium medical products designed for professional healthcare environments",
+  "searchPlaceholder": "Search...",
+  "noResults": "No products found matching \"{{query}}\" in {{category}}",
+
+  "categories": {
+    "Medical Imaging": "Medical Imaging",
+    "Medical Equipment": "Medical Equipment",
+    "Sterilization Equipment": "Sterilization Equipment",
+    "Dental Parts & Accessories": "Dental Parts & Accessories",
+    "Dental Lab Equipment": "Dental Lab Equipment",
+    "Dental Implants": "Dental Implants",
+    "Dental Imaging": "Dental Imaging",
+    "Dental Equipment": "Dental Equipment",
+    "Medical Chair": "Medical Chair"
+  },
+
+  "products": {
+    "1": {
+      "title": "Portable Ultrasound System with Doppler",
+      "description": "State-of-the-art portable ultrasound system featuring advanced Doppler imaging capabilities for superior blood flow visualization and analysis. The compact laptop-like design with integrated keyboard and high-definition display provides exceptional portability and user-friendly operation. Suitable for vascular imaging, cardiology, emergency medicine, and general diagnostics. Features Color Doppler overlay and detailed spectral Doppler waveforms with velocity measurements for comprehensive hemodynamic assessment."
+    },
+    "2": {
+      "title": "Automated Blood Pressure Monitoring Station",
+      "description": "Sophisticated automated blood pressure monitoring station designed for precision, mobility, and ease of use in modern healthcare settings. Features state-of-the-art automated cuff system utilizing advanced oscillometric technology for accurate systolic and diastolic readings. The intuitive high-definition touchscreen display serves as the command center for effortless operation. Mounted on a sturdy mobile pedestal base with smooth-gliding casters for maximum flexibility. Ideal for clinics, hospitals, pharmacies, and health screening centers."
+    },
+    "3": {
+      "title": "Dental Autoclave Sterilizer",
+      "description": "Tabletop dental autoclave with digital display and programmable controls. Features circular stainless steel chamber with multiple racks, hinged door with blue handle, USB connectivity, and power control. Provides reliable steam sterilization at 121°C or 134°C for surgical and dental instruments."
+    },
+    "4": {
+      "title": "Dental Autoclave with Handpiece Cleaner System",
+      "description": "Modern dental autoclave with color touchscreen interface and integrated handpiece flushing system. Features front-loading stainless steel chamber with multiple racks, digital cycle control, water reservoir, and pre-sterilization cleaning attachment. Ensures comprehensive instrument sterilization and reprocessing."
+    },
+    "5": {
+      "title": "Professional Dental Autoclave",
+      "description": "Class B dental autoclave with advanced digital control panel. Features multiple sterilization programs (Unwrapped, Wrapped, Prion, Porous), adjustable temperatures (134°C, 121°C), vacuum and drying cycles, stainless steel chamber with multiple racks, and clear digital displays for temp, pressure, and time monitoring."
+    },
+    "6": {
+      "title": "Piezo Bone Surgery Tips Kit",
+      "description": "Comprehensive piezo bone surgery tips kit with gold-coated titanium tips for ultrasonic bone cutting. Includes multiple curved tip configurations, stainless steel storage racks with silicone inserts, sterilization cassettes, and individual blister packaging for precise oral surgical procedures."
+    },
+    "7": {
+      "title": "Dental Turbine Rotor Assembly Kit",
+      "description": "Professional replacement rotor assembly for dental turbine handpieces. Complete kit includes air-driven impeller rotor, high-precision ball bearings, O-ring seals, and spacers. Designed for high-speed performance with minimal vibration and friction."
+    },
+    "8": {
+      "title": "Dental 3D Printer (DLP/SLA)",
+      "description": "Professional desktop 3D printer with red translucent UV-filtering cover for high-resolution dental applications. Features touchscreen interface with Print, Control, Settings, and Maintenance menus. Ideal for fabricating dental models, surgical guides, crowns, bridges, and orthodontic appliances."
+    },
+    "9": {
+      "title": "Dental Aligner Vacuum Forming Machine",
+      "description": "Professional vacuum forming and pressing machine for fabricating custom clear dental aligners. Features red and black housing with heating element, removable clear forming tray, temperature/pressure controls, and white base unit. Essential for orthodontic aligner production."
+    },
+    "10": {
+      "title": "Dental Implant Abutment Screw Set",
+      "description": "Precision dental implant abutment screws for connecting implant fixtures to prosthetic restorations. Manufactured from biocompatible titanium with threaded design for secure attachment. Essential component for dental implantology procedures."
+    },
+    "11": {
+      "title": "i-SCAN Intraoral Scanner",
+      "description": "Advanced digital impression system with large color touchscreen interface. Features intuitive menu with Patient Card, Register, Settings, Images, and Scan functions. Captures high-resolution 3D digital models for restorative dentistry, orthodontics, and patient communication. Includes memory management and real-time scan display."
+    },
+    "12": {
+      "title": "Portable Handheld Dental X-ray with Display",
+      "description": "Innovative portable handheld dental X-ray unit with integrated digital display for immediate image visualization. Features adjustable exposure settings (60kV, 0.36s), comprehensive control panel with multiple imaging modes, collimator cone for beam direction, READY indicator, and ergonomic handle. Eliminates need for separate sensors and monitors."
+    },
+    "13": {
+      "title": "Digital Dental Sensor with Touchscreen",
+      "description": "Advanced digital dental sensor/detector with color touchscreen interface. Features exposure time display (0.160s), calibrated for 70kV 3mA X-ray parameters, multiple imaging modes with Chinese/English interface, and patient/tooth-specific settings. Combines radiation measurement and digital image capture for quality assurance and diagnosis."
+    },
+    "14": {
+      "title": "Portable Digital X-ray Imaging System",
+      "description": "Complete portable digital X-ray system with generator, digital detector plate, and laptop display. Features adjustable collimator with control knobs, comprehensive button panel for exposure settings, immediate digital output for chest and body imaging. Ideal for point-of-care diagnostics in emergency rooms, ICUs, mobile units, and veterinary applications."
+    },
+    "15": {
+      "title": "Professional Dental Intraoral Scanner (Blue)",
+      "description": "Modern blue and white intraoral scanner with integrated orthodontic software. Features ergonomic pen-like handpiece design, wired connectivity with docking station, software with 3D tooth rendering and color-coded accuracy mapping. Ideal for digital impressions, orthodontic treatment planning, clear aligner fabrication, and treatment monitoring."
+    },
+    "16": {
+      "title": "Portable Dental X-ray Unit",
+      "description": "Portable dental X-ray unit with digital display with 60kV and 2mA settings, 0.35s exposure time, battery-powered operation, tooth and patient positioning icons, radiation safety indicator, and intuitive button controls. Compact design for intraoral radiography, caries detection, and dental diagnostics."
+    },
+    "17": {
+      "title": "Portable Dental X-ray Unit with Digital Display",
+      "description": "Compact and lightweight portable dental X-ray unit designed for exceptional mobility and ease of use. Features a vibrant digital display showing adjustable voltage (60kV), precise exposure times (adjustable to 2.00s), and intuitive control panel with pre-set imaging modes for various dental applications. The integrated carrying strap enhances portability, making it ideal for multi-operatory practices and mobile dental services. Battery-powered for cordless freedom and versatile deployment."
+    },
+    "18": {
+      "title": "Handheld Intraoral Dental X-Ray Unit",
+      "description": "Ergonomic handheld intraoral dental X-ray unit with portable design for comfortable operation and precise positioning. Features digital LCD screen with user-friendly button interface for quick selection of optimal exposure settings. The lightweight, compact, and fully integrated design makes it exceptionally portable and easy to maneuver. Ideal for intraoral imaging applications including caries detection, periodontal assessment, endodontic evaluations, and pre-implant diagnostics."
+    },
+    "19": {
+      "title": "Dental Headlight with Magnification Loupes",
+      "description": "Professional head-mounted LED illumination system with integrated magnification loupes for enhanced visualization during dental procedures. Features adjustable headband, dual LED lights, and interchangeable magnifying lenses for optimal precision."
+    },
+    "20": {
+      "title": "Professional Dental Loupes Set",
+      "description": "Precision dental loupes with multiple mounting options. Available with integrated LED illumination for shadow-free visibility. Perfect for restorative dentistry, surgery, and detailed examination work."
+    },
+    "21": {
+      "title": "Digital Apex Locator",
+      "description": "Advanced electronic apex locator with large touchscreen display for precise root canal length measurement. Features intuitive interface with visual and audible feedback for accurate endodontic procedures."
+    },
+    "22": {
+      "title": "Electronic Apex Locator",
+      "description": "Electronic apex locator with multi-segment digital display. Provides precise canal length measurements with color-coded visual feedback and numerical scale for successful endodontic treatment."
+    },
+    "23": {
+      "title": "LED Curing Light",
+      "description": "Cordless LED dental curing light for polymerizing composite resins and bonding materials. Features digital display, multiple curing modes, adjustable timer, and ergonomic handheld design for efficient restorative procedures."
+    },
+    "24": {
+      "title": "Wireless Endodontic Rotary System",
+      "description": "Professional wireless motor-driven endodontic handpiece system for root canal procedures. Features angled handpiece with rotary file mechanism, separate control unit with speed/torque settings, and foot pedal operation. Designed for precision endodontic treatment with minimal cable clutter."
+    },
+    "25": {
+      "title": "Cordless Endodontic Obturation Gun",
+      "description": "Professional cordless obturation gun for root canal therapy. Features ergonomic design, angled delivery tip for posterior access, digital temperature control, and rechargeable battery. Delivers heated gutta-percha for precise canal filling and sealing."
+    },
+    "26": {
+      "title": "Cordless Warm Vertical Condensation Device",
+      "description": "Advanced cordless obturation device for warm vertical condensation and continuous wave root canal filling. Features contra-angle design with fine heated applicator tip, battery operation, and precision temperature control for optimal gutta-percha delivery."
+    },
+    "27": {
+      "title": "Air Polishing Handpiece",
+      "description": "Premium dental air polishing system for professional teeth cleaning. Features ergonomic pistol-grip design, transparent powder reservoir for easy monitoring, detachable angled nozzle, and high-efficiency stain and plaque removal technology."
+    },
+    "28": {
+      "title": "Endodontic Motor System",
+      "description": "Advanced endodontic motor with integrated apex locator. Features color digital display, programmable speed/torque control, cordless handpiece with contra-angle attachment, and real-time root canal length measurement for precise treatment."
+    },
+    "29": {
+      "title": "Complete Dental Treatment Unit with LED Light",
+      "description": "Integrated dental workstation featuring patient chair with multi-segment positioning, articulated LED operating light, instrument delivery system with multiple handpiece connections, digital control panel, and ergonomic design for comprehensive dental procedures."
+    },
+    "30": {
+      "title": "Professional Dental Treatment Unit",
+      "description": "High-end dental treatment unit with complete operatory setup. Features ergonomic patient chair, advanced LED lighting, multiple handpiece delivery system, digital control panel, assistant station, and professional stool. Designed for comprehensive dental practice."
+    },
+    "31": {
+      "title": "Integrated Dental Operatory with Patient Monitoring",
+      "description": "Advanced integrated dental operatory unit with patient chair, multi-LED surgical light, mobile instrument delivery cart, and integrated vital signs monitor. Features digital display for real-time monitoring of heart rate, blood pressure, and oxygen saturation during procedures."
+    },
+    "32": {
+      "title": "Modern Dental Treatment Chair Unit (Premium Black)",
+      "description": "Comprehensive dental treatment unit with sleek black upholstery. Includes fully adjustable patient chair, integrated instrument delivery console with digital controls, articulated examination light, ceramic spittoon with faucet, and ergonomic dentist stool. All-in-one modern operatory solution."
+    }
+  }
+}

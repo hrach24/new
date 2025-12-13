@@ -13,7 +13,7 @@ import Layout from "@/components/layout/Layout.jsx";
 import News from "@/components/pages/news/News.jsx";
 import ContactUs from "@/components/pages/contactUs/ContactUs.jsx";
 import Products from "@/components/pages/products/Products.jsx";
-
+import "./i18n/index.js";
 // Scroll to top component
 export const ScrollToTop = () => {
   const { pathname } = useLocation();

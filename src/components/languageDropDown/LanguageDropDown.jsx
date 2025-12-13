@@ -2,7 +2,9 @@ import React from "react";
 import "./LanguageDropDown.scss";
 import cnFlag from "@/assets/images/header/chinese-flag.webp";
 import krFlag from "@/assets/images/header/korean-flag.webp";
+import { useTranslation } from "react-i18next";
 const LanguageDropDown = ({ setOpenLanguage, setDefaultLanguage }) => {
+  const { i18n } = useTranslation();
   return (
     <>
       <div
@@ -14,6 +16,7 @@ const LanguageDropDown = ({ setOpenLanguage, setDefaultLanguage }) => {
           className={"language__dropDown__item"}
           onClick={() => {
             setDefaultLanguage({ title: "CN", img: cnFlag });
+            i18n.changeLanguage("zh");
             setOpenLanguage(false);
           }}
         >
@@ -26,6 +29,7 @@ const LanguageDropDown = ({ setOpenLanguage, setDefaultLanguage }) => {
           className={"language__dropDown__item"}
           onClick={() => {
             setDefaultLanguage({ title: "KR", img: krFlag });
+            i18n.changeLanguage("kr");
             setOpenLanguage(false);
           }}
         >
